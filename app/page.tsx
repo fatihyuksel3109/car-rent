@@ -82,7 +82,7 @@ export default function Home({ searchParams }: HomeProps) {
               ))}
             </div>
             {loading && (
-              <div className="mt-16 w-full flex-center">
+              <div className="mt-16 h-10 rounded-full w-full bg-primary-blue flex-center">
                 <Image
                   src="/loader.svg"
                   alt="loader"
@@ -99,9 +99,15 @@ export default function Home({ searchParams }: HomeProps) {
             />
           </section>
         ) : (
-          <div className="home__error-container">
-            <h2 className="text-black text-xl font-bold">Oops, no results</h2>
-          </div>
+          <div className="mt-16 h-20 rounded-full w-full bg-primary-blue flex-center">
+                <Image
+                  src="/loader.svg"
+                  alt="loader"
+                  width={50}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
         )}
       </div>
     </main>
